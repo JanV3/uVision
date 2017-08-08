@@ -70,12 +70,18 @@ public:
 
     virtual ~Application() = default;
 
+    /// @brief Set application name.
+    ///
+    /// Usefull to distinguish if there is more than one application.
+    /// @param name name of application
     void setName(std::string name)
     {
         name_ = name;
     }
 
-    void run()
+    /// @brief Initialise application using virtual init() function and
+    /// starts listen to SIGINT/SIGTERM signals
+    void start()
     {
         std::cout << "Starting application '" << name_ << "'" << std::endl;
 

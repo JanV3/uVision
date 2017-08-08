@@ -6,12 +6,12 @@ int main()
 {
     std::thread t([]() {
         Test::Application1 app1{"Test1"};
-        app1.run();
+        app1.start();
     });
 
     Test::Application1 app2;
     app2.setName("Test2");
-    app2.run();
+    app2.start();
 
     t.join();
 
