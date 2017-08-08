@@ -9,6 +9,7 @@ int main()
         app1.start();
     });
 
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
     Test::Application1 app2;
     app2.setName("Test2");
     app2.start();
